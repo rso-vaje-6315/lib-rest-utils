@@ -1,4 +1,4 @@
-# Rest Utils library
+# Rest Utils library 1.0.0
 
 ## Deploy
 
