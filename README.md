@@ -1,4 +1,6 @@
-# Rest Utils library
+# Rest Utils library 1.0.0
+
+![status](https://api.travis-ci.org/rso-vaje-6315/lib-rest-utils.svg)
 
 ## Deploy
 

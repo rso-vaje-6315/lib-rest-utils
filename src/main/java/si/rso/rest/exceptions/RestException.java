@@ -20,4 +20,8 @@ public class RestException extends RuntimeException {
         super(message);
         this.status = status;
     }
+    
+    public int getStatus() {
+        return this.status;
+    }
 }
