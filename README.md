@@ -28,16 +28,56 @@ There are also available overloaded methods to provide additional information to
 
 ### Additional HTTP constants
 
-Library introduces new status: 422 (validation failed)
+Library introduces new statuses: 
+
+* 422 (validation failed)
 
 ```java
 int status = HttpStatus.VALIDATION_FAILED;
 ```
 
-It also provides header field 'X-Total-Count'
+* 424 (validation failed)
+
+```java
+int status = HttpStatus.FAILED_DEPENDENCY;
+```
+
+It also provides header fields:
+
+* *X-Total-Count*
 
 ```java
 String header = HttpHeaders.X_TOTAL_COUNT;
+```
+
+* *Content-Disposition*
+
+```java
+String header = HttpHeaders.CONTENT_DISPOSITION;
+```
+
+* *Authorization*
+
+```java
+String header = HttpHeaders.AUTHORIZATION;
+```
+
+* *X-Service-Name*
+
+```java
+String header = HttpHeaders.X_SERVICE_NAME;
+```
+
+* *X-Service-Version*
+
+```java
+String header = HttpHeaders.X_SERVICE_VERSION;
+```
+
+* *X-Powered-By*
+
+```java
+String header = HttpHeaders.X_POWERED_BY;
 ```
 
 ### Exceptions
@@ -45,6 +85,10 @@ String header = HttpHeaders.X_TOTAL_COUNT;
 #### Rest exception
 
 Generic base exception. All other exceptions inherit from it.
+
+#### ServiceCall exception
+
+Thrown when call to other service fails. Returns code 503.
 
 #### Validation exception
 
